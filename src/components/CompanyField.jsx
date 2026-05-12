@@ -66,69 +66,69 @@ function CompanyField() {
 
     async function fetchResult(value) {
         setLoading(true);
-        // const response = await fetch(`/api/company?query=${value}`);
+        const response = await fetch(`/api/company?query=${value}`);
 
 
-        // const data = await response.json();
+        const data = await response.json();
 
-        // setResult(data.results || []);
+        setResult(data.results || []);
 
-        await new Promise((resolve) => setTimeout(resolve, 3000));
+        // await new Promise((resolve) => setTimeout(resolve, 3000));
 
-        const mockCompanies = [
-            {
-                active: true,
-                company_id: "DE-HRB-123456",
-                country: "DE",
-                legal_form: "gmbh",
-                name: "Mustermann GmbH",
-                register_court: "Berlin",
-                register_number: "123456",
-                register_type: "HRB",
-            },
-            {
-                active: true,
-                company_id: "DE-HRA-987654",
-                country: "DE",
-                legal_form: "kg",
-                name: "Müller & Partner KG",
-                register_court: "Hamburg",
-                register_number: "987654",
-                register_type: "HRA",
-            },
-            {
-                active: false,
-                company_id: "DE-HRB-555555",
-                country: "DE",
-                legal_form: "ug",
-                name: "Startup Vision UG",
-                register_court: "München",
-                register_number: "555555",
-                register_type: "HRB",
-            },
-            {
-                active: true,
-                company_id: "DE-VR-83669",
-                country: "DE",
-                legal_form: "ev",
-                name: "Kulturverein Mus Hasköy e.V.",
-                register_court: "Darmstadt",
-                register_number: "83669",
-                register_type: "VR",
-            },
-            {
-                active: false,
-                company_id: "DE-HRB-777777",
-                country: "DE",
-                legal_form: "ag",
-                name: "Future Energy AG",
-                register_court: "Frankfurt am Main",
-                register_number: "777777",
-                register_type: "HRB",
-            },
-        ];
+        // const mockCompanies = [
+        //     {
+        //         active: true,
+        //         company_id: "DE-HRB-123456",
+        //         country: "DE",
+        //         legal_form: "gmbh",
+        //         name: "Mustermann GmbH",
+        //         register_court: "Berlin",
+        //         register_number: "123456",
+        //         register_type: "HRB",
+        //     },
+        //     {
+        //         active: true,
+        //         company_id: "DE-HRA-987654",
+        //         country: "DE",
+        //         legal_form: "kg",
+        //         name: "Müller & Partner KG",
+        //         register_court: "Hamburg",
+        //         register_number: "987654",
+        //         register_type: "HRA",
+        //     },
+        //     {
+        //         active: false,
+        //         company_id: "DE-HRB-555555",
+        //         country: "DE",
+        //         legal_form: "ug",
+        //         name: "Startup Vision UG",
+        //         register_court: "München",
+        //         register_number: "555555",
+        //         register_type: "HRB",
+        //     },
+        //     {
+        //         active: true,
+        //         company_id: "DE-VR-83669",
+        //         country: "DE",
+        //         legal_form: "ev",
+        //         name: "Kulturverein Mus Hasköy e.V.",
+        //         register_court: "Darmstadt",
+        //         register_number: "83669",
+        //         register_type: "VR",
+        //     },
+        //     {
+        //         active: false,
+        //         company_id: "DE-HRB-777777",
+        //         country: "DE",
+        //         legal_form: "ag",
+        //         name: "Future Energy AG",
+        //         register_court: "Frankfurt am Main",
+        //         register_number: "777777",
+        //         register_type: "HRB",
+        //     },
+        // ];
 
-        setResult(mockCompanies || []);
+        // setResult(mockCompanies || []);
 
         setOpen(true);
         setLoading(false);
