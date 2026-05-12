@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Users, Building2, MapPin, Landmark, Calendar, BriefcaseBusiness } from "lucide-react";
 
 function CompanyField() {
     const [query, setQuery] = useState("");
@@ -154,16 +155,28 @@ function CompanyField() {
     return (
         <div >
             {/* Section title */}
-            <div className="mb-8">
-                <h2 className="text-xl font-semibold">Unternehmen</h2>
+            <div className="mb-8 border-b border-slate-200 pb-4">
+                <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-indigo-50 flex items-center justify-center">
+                        <Building2 className="w-5 h-5 text-indigo-600" />
+                    </div>
+                    <div>
+                        <h2 className="text-lg font-semibold text-slate-900">
+                            Unternehmen
+                        </h2>
+                    </div>
+                </div>
             </div>
 
             {/* Fields */}
             <div className="space-y-5">
                 {/* Firmenname */}
                 <div>
-                    <div className="inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-sm font-medium text-indigo-700 border border-indigo-100 mb-4">
-                        🏢 Basisdaten
+                    <div className="flex items-center gap-2 mb-5 border-l-2 border-indigo-500 pl-3">
+                        <BriefcaseBusiness className="w-4 h-4 text-slate-500" />
+                        <h3 className="text-sm font-semibold text-slate-700">
+                            Basisdaten
+                        </h3>
                     </div>
                     <div>
                         <Input
@@ -221,7 +234,7 @@ function CompanyField() {
                     {/* Grid row */}
                     <div className="grid md:grid-cols-3 gap-4">
                         <div>
-                            <label className="text-sm font-medium block mb-1.5">
+                            <label className="text-[11px] font-medium text-slate-500 uppercase tracking-wide">
                                 Rechtsform
                             </label>
                             <select
@@ -235,7 +248,7 @@ function CompanyField() {
                         </div>
 
                         <div>
-                            <label className="text-sm font-medium block mb-1.5">
+                            <label className="text-[11px] font-medium text-slate-500 uppercase tracking-wide">
                                 Branche
                             </label>
                             <select className="w-full rounded-lg border border-slate-300 px-3 py-2.5 text-sm focus:outline-none focus:ring-4 focus:ring-indigo-100 focus:border-indigo-500">
@@ -248,8 +261,11 @@ function CompanyField() {
                     </div>
                 </div>
                 <div>
-                    <div className="inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-sm font-medium text-indigo-700 border border-indigo-100 mb-4">
-                        👥 Team & Größe
+                    <div className="flex items-center gap-2 mb-5 border-l-2 border-indigo-500 pl-3">
+                        <Users className="w-4 h-4 text-slate-500" />
+                        <h3 className="text-sm font-semibold text-slate-700">
+                            Team & Größe
+                        </h3>
                     </div>
                     <div className="grid md:grid-cols-3 gap-4">
                         <div className="md:col-span-2">
@@ -261,8 +277,11 @@ function CompanyField() {
                     </div>
                 </div>
                 <div>
-                    <div className="inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-sm font-medium text-indigo-700 border border-indigo-100 mb-4">
-                        ⚖️ Registerdaten
+                    <div className="flex items-center gap-2 mb-5 border-l-2 border-indigo-500 pl-3">
+                        <Landmark className="w-4 h-4 text-slate-500" />
+                        <h3 className="text-sm font-semibold text-slate-700">
+                            Registerdaten
+                        </h3>
                     </div>
                     <div className="grid md:grid-cols-3 gap-4">
                         <Input
@@ -282,16 +301,22 @@ function CompanyField() {
                     </div>
                 </div>
                 <div>
-                    <div className="inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-sm font-medium text-indigo-700 border border-indigo-100 mb-4">
-                        📅 Gründung
+                    <div className="flex items-center gap-2 mb-5 border-l-2 border-indigo-500 pl-3">
+                        <Calendar className="w-4 h-4 text-slate-500" />
+                        <h3 className="text-sm font-semibold text-slate-700">
+                            Gründung
+                        </h3>
                     </div>
                     <div >
-                        <Input label="Gründungsdatum" type="date" />
+                        <Input label="Gründungsdatum" type="date" placeholder='TT.MM.JJJJ' className="w-full rounded-xl border border-slate-200 px-3 py-2.5 text-[13px]" />
                     </div>
                 </div>
                 <div>
-                    <div className="inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-sm font-medium text-indigo-700 border border-indigo-100 mb-4">
-                        📍 Adresse
+                    <div className="flex items-center gap-2 mb-5 border-l-2 border-indigo-500 pl-3">
+                        <MapPin className="w-4 h-4 text-slate-500" />
+                        <h3 className="text-sm font-semibold text-slate-700">
+                            Adresse
+                        </h3>
                     </div>
                     <div className="grid md:grid-cols-3 gap-4">
                         <div className="md:col-span-2">
@@ -318,7 +343,7 @@ function CompanyField() {
 function Input({ label, ...props }) {
     return (
         <div>
-            <label className="text-sm font-medium block mb-1.5 text-slate-700">
+            <label className="text-[11px] font-medium text-slate-500 uppercase tracking-wide">
                 {label}
             </label>
             <input

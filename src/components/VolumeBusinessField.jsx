@@ -1,20 +1,29 @@
+import { CreditCard, Wallet, Banknote, BarChart3 } from "lucide-react";
+
 function VolumeBusinessField() {
     return (
         <div >
             {/* Section title */}
-            <div className="mb-8">
-                <h2 className="text-xl font-semibold">Volumen & Geschäft</h2>
+            <div className="mb-8 border-b border-slate-200 pb-4">
+                <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-indigo-50 flex items-center justify-center">
+                        <BarChart3 className="w-5 h-5 text-indigo-600" />
+                    </div>
+                    <div>
+                        <h2 className="text-lg font-semibold text-slate-900">
+                            Volumen & Geschäft
+                        </h2>
+                    </div>
+                </div>
             </div>
-
             {/* Fields */}
             <div className="space-y-5">
-                {/* Finanzdaten */}
                 <div>
-                    {/* <h3 className="text-sm font-semibold text-slate-800 mb-4">
-                        💰 Finanzdaten
-                    </h3> */}
-                    <div className="inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-sm font-medium text-indigo-700 border border-indigo-100 mb-4">
-                        💰 Finanzdaten
+                    <div className="flex items-center gap-2 mb-5 border-l-2 border-indigo-500 pl-3">
+                        <Wallet className="w-4 h-4 text-slate-500" />
+                        <h3 className="text-sm font-semibold text-slate-700">
+                            Finanzdaten
+                        </h3>
                     </div>
                     <div className="grid md:grid-cols-3 gap-4">
                         <Input
@@ -45,11 +54,11 @@ function VolumeBusinessField() {
                     </div>
                 </div>
                 <div>
-                    {/* <h3 className="text-sm font-semibold text-slate-800 mb-4">
-                        🏦 Banking
-                    </h3> */}
-                     <div className="inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-sm font-medium text-indigo-700 border border-indigo-100 mb-4">
-                        🏦 Banking
+                    <div className="flex items-center gap-2 mb-5 border-l-2 border-indigo-500 pl-3">
+                        <Banknote className="w-4 h-4 text-slate-500" />
+                        <h3 className="text-sm font-semibold text-slate-700">
+                            Banking
+                        </h3>
                     </div>
                     {/* Grid row */}
                     <div className="grid md:grid-cols-3 gap-4">
@@ -68,15 +77,15 @@ function VolumeBusinessField() {
                     </div>
                 </div>
                 <div>
-                    {/* <h3 className="text-sm font-semibold text-slate-800 mb-4">
-                        💳 Zahlungsverkehr
-                    </h3> */}
-                     <div className="inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-sm font-medium text-indigo-700 border border-indigo-100 mb-4">
-                        💳 Zahlungsverkehr
+                    <div className="flex items-center gap-2 mb-5 border-l-2 border-indigo-500 pl-3">
+                        <CreditCard className="w-4 h-4 text-slate-500" />
+                        <h3 className="text-sm font-semibold text-slate-700">
+                            Zahlungsverkehr
+                        </h3>
                     </div>
                     <div className="grid md:grid-cols-3 gap-4">
                         <div>
-                            <label className="text-sm font-medium block mb-1.5">
+                            <label className="text-[11px] font-medium text-slate-500 uppercase tracking-wide">
                                 Kassensystem / TSE
                             </label>
                             <select className="w-full rounded-lg border border-slate-300 px-3 py-2.5 text-sm focus:outline-none focus:ring-4 focus:ring-indigo-100 focus:border-indigo-500">
@@ -87,7 +96,7 @@ function VolumeBusinessField() {
                             </select>
                         </div>
                         <div>
-                            <label className="text-sm font-medium block mb-1.5">
+                            <label className="text-[11px] font-medium text-slate-500 uppercase tracking-wide">
                                 Bargeldverkehr
                             </label>
                             <select className="w-full rounded-lg border border-slate-300 px-3 py-2.5 text-sm focus:outline-none focus:ring-4 focus:ring-indigo-100 focus:border-indigo-500">
@@ -119,7 +128,7 @@ function VolumeBusinessField() {
 function Input({ label, ...props }) {
     return (
         <div>
-            <label className="text-sm font-medium block mb-1.5 text-slate-700">
+            <label className="text-[11px] font-medium text-slate-500 uppercase tracking-wide">
                 {label}
             </label>
             <input

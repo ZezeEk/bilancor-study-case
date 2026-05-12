@@ -103,7 +103,8 @@ export default function App() {
             <button
               onClick={() => setStep(step - 1)}
               disabled={step === 1}
-              className="px-4 py-2.5 rounded-lg border border-slate-300 text-sm font-medium hover:bg-indigo-700 transition-colors
+              hidden = {isCompleted}
+              className="px-4 py-2.5 rounded-lg border border-slate-300 text-[13px] font-medium hover:bg-indigo-700 transition-colors
   disabled:opacity-40 disabled:cursor-not-allowed">
               Zurück
             </button>
@@ -113,8 +114,9 @@ export default function App() {
                 if (step === 5) setIsCompleted(true);
                 setStep(step + 1);
               }}
+              hidden = {isCompleted}
               // disabled={step === steps.length}
-              className="px-4 py-2.5 rounded-lg bg-indigo-600 text-white text-sm font-medium hover:bg-indigo-700 transition-colors
+              className="px-4 py-2.5 rounded-lg bg-indigo-600 text-white text-[13px] font-medium hover:bg-indigo-700 transition-colors
   disabled:opacity-40 disabled:cursor-not-allowed">
               {step === 5 ? "Absenden" : "Weiter →"}
             </button>
